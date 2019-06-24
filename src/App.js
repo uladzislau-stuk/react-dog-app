@@ -12,14 +12,14 @@ class App extends Component {
         return (
             <Switch>
                 <Route
-                    exact
-                    path='/dogs'
+					exact
+					path='/dogs'
                     render={() => <DogList dogs={dogs} /> }
                 />
                 <Route
                     exact
                     path='/dogs/:name'
-                    render={(routeProps) => <DogDetails {...routeProps} /> }
+                    render={(routeProps) => <DogDetails dogs={dogs} {...routeProps} /> }
                 />
             </Switch>
         );

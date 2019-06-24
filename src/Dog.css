@@ -1,3 +1,7 @@
 .Dog img {
 	width: 75%;
 }
+
+.Dog:hover {
+	cursor: pointer;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import uuid from 'uuid/v4'
 import Dog from './Dog'
 
 const DogList = (props) => {
@@ -8,7 +9,7 @@ const DogList = (props) => {
 			<div className='container'>
 				<div className='row'>
 					{props.dogs.map(dog => (
-						<Dog {...dog} />
+						<Dog key={uuid()} {...dog} />
 					))}
 				</div>
 			</div>
