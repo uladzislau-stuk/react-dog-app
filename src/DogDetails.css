@@ -1,3 +1,11 @@
-.Card {
-	width: 300px;
+.DogDetails {
+	display: table;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(45deg, lightcyan 0%, white 50%, lightcyan 100%);
+}
+
+.DogDetails-container {
+	display: table-cell;
+	vertical-align: middle;
 }

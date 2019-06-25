@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
-import { Switch, Route } from "react-router-dom";
+import React, { Component } from 'react'
+import { Switch, Route } from 'react-router-dom'
 import DogList from './DogList'
 import DogDetails from './DogDetails'
+import NoMatch from './NoMatch'
 import dogs from './data/dogs'
 
 class App extends Component {
-    constructor(props) {
-        super(props)
-    }
     render() {
         return (
             <Switch>
@@ -19,11 +17,14 @@ class App extends Component {
                 <Route
                     exact
                     path='/dogs/:name'
-                    render={(routeProps) => <DogDetails dogs={dogs} {...routeProps} /> }
+                    render={routeProps => <DogDetails dogs={dogs} {...routeProps} /> }
+                />
+                <Route
+                    render={NoMatch}
                 />
             </Switch>
-        );
+        )
     }
 }
 
-export default App;
+export default App
